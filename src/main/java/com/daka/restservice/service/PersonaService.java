@@ -26,7 +26,11 @@ public class PersonaService {
 		return personaRepo.findById(idPersona);
 	}
 	
-	public Optional<Persona> getPersonaByNombre(String nombre)	{
+	public Optional<List<Persona>> findPersonaByApellidoPaterno(String apellidoPaterno)	{
+		return personaRepo.findByApellidoPaterno(apellidoPaterno);
+	}
+
+	public Optional<List<Persona>> findPersonaByNombre(String nombre)	{
 		return personaRepo.findByNombre(nombre);
 	}
 	

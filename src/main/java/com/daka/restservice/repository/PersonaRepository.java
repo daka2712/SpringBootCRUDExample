@@ -1,5 +1,6 @@
 package com.daka.restservice.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,6 +11,7 @@ import com.daka.restservice.entity.Persona;
 @Repository
 public interface PersonaRepository extends JpaRepository<Persona, Integer> {
 	
-    Optional<Persona> findByNombre(String nombre);
+    Optional<List<Persona>> findByNombre(String nombre);
+    Optional<List<Persona>> findByApellidoPaterno(String apellidoPaterno);
     
 }
